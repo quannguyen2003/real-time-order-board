@@ -10,7 +10,7 @@ interface OrderColumnProps {
 }
 
 function OrderColumnComponent({ token, apiUrl, staggerDelay = 0 }: OrderColumnProps) {
-  const { data, isLoading, error } = useOrderData(apiUrl, 1000);
+  const { data, isLoading, error } = useOrderData(apiUrl, 100);
 
   // Calculate price color based on previous price
   const rowsWithColors = useMemo(() => {
